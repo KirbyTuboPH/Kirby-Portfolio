@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+<rect width="800" height="450" fill="#28323a"/><rect y="290" width="800" height="160" fill="#465044"/><circle cx="650" cy="100" r="55" fill="#d8c49b" opacity=".5"/>
+<path d="M315 155 Q400 105 485 155 L470 235H330Z" fill="#11171b" stroke="#d8d3bf" stroke-width="6"/><rect x="345" y="210" width="110" height="24" rx="6" fill="#8b8d7c"/><path d="M350 235L320 330H480L450 235Z" fill="#4b5a52"/>
+<text x="400" y="70" text-anchor="middle" fill="#f4f0e5" font-family="Arial,sans-serif" font-size="54" font-weight="bold">PUBG</text><text x="400" y="112" text-anchor="middle" fill="#e5bd62" font-family="Arial,sans-serif" font-size="25" font-weight="bold">MOBILE</text>
+</svg>
