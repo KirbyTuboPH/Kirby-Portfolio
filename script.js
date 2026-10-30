@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const mainCard = document.getElementById("mainCard");
   const thumbnails = document.querySelectorAll(".thumbnail");
 
-  const images = ["assets/UTS.png", "assets/ferson.jpg", "assets/SKD.jpg"];
+  const images = ["assets/UTS.png", "assets/ferson2.png", "assets/SKD.jpg"];
 
   function selectPhoto(index) {
     const order = [
