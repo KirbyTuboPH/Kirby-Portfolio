@@ -923,6 +923,18 @@ section {
     box-sizing: border-box;
 }
 
+.section-games {
+    padding: 50px 8%;
+    margin-bottom: 20px;
+    scroll-margin-top: 100px;
+    border: 1px solid #5a480d;
+    border-radius: 12px;
+    background-image: linear-gradient(to bottom, rgba(7, 22, 41, 0.349), rgba(7, 22, 41, 0.349)), url('assets/gaming\ background.jpg') ;
+    background-size: cover;
+    box-sizing: border-box;
+}
+
+
 
 html {
     scroll-behavior: smooth;
@@ -1522,4 +1534,3 @@ html {
     transform: scale(1.2) translateY(-8px);
     z-index: 10;
 }
-
