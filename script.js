@@ -258,7 +258,9 @@ function checkInfo() {
     description.style.backgroundColor = "#a5b4c88c";
     description.style.padding = "10px";
     description.style.borderRadius = "5px";
-    description.style.width = "680px";
+    description.style.width = "100%";
+    description.style.maxWidth = "680px";
+    description.style.boxSizing = "border-box";
     description.style.margin = "0 auto";
     description.style.textAlign = "center";
   } else {
