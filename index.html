@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio | Kirby</title>
     <meta
       name="description"
@@ -59,7 +59,7 @@
         </div>
       </section>
 
-      <section id="about" class="section about">
+      <section id="about" class="section">
         <div class="section-title">
           <p>GET TO KNOW ME</p>
           <h2>About Me</h2>
@@ -82,20 +82,22 @@
               activities and personal projects. I want to improve my knowledge
               and gain more experience in IT.
             </p>
+
+            
           </div>
 
-          <div class="info-card">
+        <div class="info-card">
             <h3>Personal Information</h3>
             <p id="Display-Info">Type The "Info" here</p>
-            <label for="txtInfo">Enter Information:</label>
-            <input type="text" id="txtInfo" name="txtInfo" required />
+            <label id="InfoLabel" for="txtInfo">Enter Information:</label>
+            <input  placeholder="Enter text..." type="text" id="txtInfo" name="txtInfo" required />
 
-            <button onclick="checkInfo()">Submit</button>
+            <button type="submit" id="submitBtn" onclick="checkInfo()">Submit</button>
 
             <h1 id="infoResult"></h1>
             <p id="Description"></p>
           </div>
-        </div>
+       </div>
       </section>
 
       <section id="gaming" class="section-games">
