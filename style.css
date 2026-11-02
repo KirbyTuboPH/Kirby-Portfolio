@@ -457,6 +457,10 @@
     }
 
     .info-card {
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        width: 750px;
         padding: 28px;
         background: var(--card);
         border: 1px solid var(--border);
@@ -537,8 +541,9 @@
     }
 
     .project-card img {
-        width: 100%;
-        height: 190px;
+        width: 150px;
+        height: 150px;
+        border-radius: 60px;
         object-fit: cover;
         background: #202b40;
         padding: 18px;
@@ -1541,3 +1546,131 @@
         transform: scale(1.2) translateY(-8px);
         z-index: 10;
     }
+
+
+.project-slider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.project-window {
+    width: 100%;
+    max-width: 650px;
+    overflow: hidden;
+    border-radius: 18px;
+}
+
+.project-track {
+    display: flex;
+    transition: transform 0.5s cubic-bezier(.22, .61, .36, 1);
+}
+
+.project-card {
+    flex: 0 0 100%;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.project-card img {
+    width: 100%;
+    height: 220px;
+    object-fit:contain;
+    display: block;
+    border-radius: 15px;
+}
+
+.project-nav {
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+    border: 1px solid #B8860B;
+    border-radius: 50%;
+    background: #111D30;
+    color: #FFD166;
+    font-size: 22px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.project-nav:hover {
+    background: #FFD166;
+    color: #111827;
+    transform: scale(1.12);
+}
+
+.project-nav:disabled {
+    display: none;
+}
+
+.project-pagination {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    margin-top: 25px;
+    color: #FFD166;
+}
+
+.project-dots {
+    display: flex;
+    gap: 9px;
+}
+
+.project-dot {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: #555;
+    transition: 0.3s ease;
+}
+
+.project-dot.active {
+    width: 25px;
+    border-radius: 10px;
+    background: #FFD166;
+}
+
+
+@media (max-width: 600px) {
+    .project-slider {
+        gap: 8px;
+    }
+
+    .project-nav {
+        width: 35px;
+        height: 35px;
+        font-size: 16px;
+    }
+}
+
+#infoTable {
+    width: 650px;
+    border-collapse: collapse;
+    margin-top: 15px;
+    background: #1e293b;
+}
+
+#infoTable th,
+#infoTable td {
+    border: 1px solid #f4c95d;
+    padding: 12px;
+    text-align: center;
+}
+
+#infoTable th {
+    background: #334155;
+    color: #f4c95d;
+}
+
+#infoTable td {
+    color: white;
+}
+
+#infoTable tr:nth-child(even) {
+    background: #27364b;
+}
