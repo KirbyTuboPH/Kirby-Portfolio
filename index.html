@@ -26,9 +26,7 @@
           <div class="dropdown-menu">
             <a href="#about">ABOUT ME</a>
             <a href="#gaming">GAMES</a>
-            <a href="#setup">GAMING SETUP</a>
             <a href="#friends">FRIENDS</a>
-            <a href="#shop">SHOP</a>
             <a href="#gallery">GALLERY</a>
             <a href="#skills">SKILLS</a>
             <a href="#education">EDUCATION</a>
@@ -59,10 +57,9 @@
         <div class="hero-image">
           <img src="assets/UTS.png" alt="Kirby's profile" />
         </div>
-
       </section>
 
-            <section id="about" class="section about">
+      <section id="about" class="section about">
         <div class="section-title">
           <p>GET TO KNOW ME</p>
           <h2>About Me</h2>
@@ -89,13 +86,14 @@
 
           <div class="info-card">
             <h3>Personal Information</h3>
-            <p><strong>Name:</strong> Kirby Isaah Tubo</p>
-            <p><strong>Birthplace:</strong> lipa, Batangas</p>
-            <p><strong>School:</strong> Sariaya, Cstc</p>
-            <p><strong>Course:</strong> BS Information Technology</p>
-            <p><strong>Year:</strong> 2nd Year</p>
-            <p><strong>Interest:</strong> Web Development</p>
-            <p><strong>Country:</strong> Philippines</p>
+            <p id="Display-Info">Type The "Info" here</p>
+            <label for="txtInfo">Enter Information:</label>
+            <input type="text" id="txtInfo" name="txtInfo" required />
+
+            <button onclick="checkInfo()">Submit</button>
+
+            <h1 id="infoResult"></h1>
+            <p id="Description"></p>
           </div>
         </div>
       </section>
@@ -260,47 +258,6 @@
         </div>
       </section>
 
-          <section class="section" id="setup">
-      <div class="section-title">
-        <p>MY EQUIPMENT</p>
-        <h2>My Gaming Setup</h2>
-      </div>
-
-      <div class="table-container">
-        <table class="setup-table">
-          <thead>
-            <tr>
-              <th>Equipment</th>
-              <th>Specification</th>
-              <th>Purpose</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Laptop</td>
-              <td>ASUS TUF Gaming A16</td>
-              <td>Gaming</td>
-            </tr>
-            <tr>
-              <td>Graphics Card</td>
-              <td>NVIDIA RTX 4050</td>
-              <td>Graphics</td>
-            </tr>
-            <tr>
-              <td>RAM</td>
-              <td>16 GB</td>
-              <td>Multitasking</td>
-            </tr>
-            <tr>
-              <td>Display</td>
-              <td>144 Hz</td>
-              <td>Smooth Gameplay</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
-
       <section id="friends" class="section">
         <div class="container">
           <h2>My Friends</h2>
@@ -327,57 +284,10 @@
 
             <div class="friend-card">
               <div class="friend-image">
-                 <img src="assets/friend-3.jpg" alt="Isaac" />
+                <img src="assets/friend-3.jpg" alt="Isaac" />
               </div>
               <h3>Friend Name 3</h3>
               <p>Part of my memorable moments.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="shop" class="section">
-        <div class="container">
-          <h2>My Shop</h2>
-          <p class="section-description">
-            Favorite gaming accessories and gadgets.
-          </p>
-
-          <div class="shop-grid">
-            <div class="shop-card">
-              <div class="shop-image">
-                <img src="assets/headset.jpg" alt="Gaming Headset" />
-              </div>
-              <h3>Gaming Headset</h3>
-              <p>₱1,499</p>
-              <a class="shop-empty">View Item</a>
-            </div>
-
-            <div class="shop-card">
-              <div class="shop-image">
-                <img src="assets/keyboard.jpg" alt="Mechanical Keyboard" />
-              </div>
-              <h3>Mechanical Keyboard</h3>
-              <p>₱2,499</p>
-              <a class="shop-empty">View Item</a>
-            </div>
-
-            <div class="shop-card">
-              <div class="shop-image">
-                <img src="assets/mouse.jpg" alt="Gaming Mouse" />
-              </div>
-              <h3>Gaming Mouse</h3>
-              <p>₱1,299</p>
-              <a class="shop-empty">View Item</a>
-            </div>
-            <div>
-              <a
-                href="./shop.html"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="shop-button-Next"
-                >See more...</a
-              >
             </div>
           </div>
         </div>
@@ -479,9 +389,10 @@
             <div>
               <h3>Senior High School</h3>
               <p>Senior High School Graduate</p>
+              <p>DepEd Dr. Panfilo Castro National High School</p>
               <p>
-                Building the foundation for college studies and developing
-                personal and academic skills.
+                Completed the ICT Strand, learning basic computer skills, and
+                other technology-related subjects.
               </p>
             </div>
           </div>
@@ -493,46 +404,72 @@
           <p>MY SCHOOL WORK</p>
           <h2>Projects</h2>
         </div>
+        <div class="project-slider">
+          <button class="project-nav prev" id="prevProject">&#10094;</button>
 
-        <div class="projects-grid">
-          <article class="project-card">
-            <img src="assets/project-website.svg" alt="Website project" />
-            <div class="project-content">
-              <span class="project-tag">HTML & CSS</span>
-              <h3>Student Website</h3>
-              <p>
-                A simple website created to practice page structure, navigation,
-                and basic web design.
-              </p>
-            </div>
-          </article>
+          <div class="project-window">
+            <div class="project-track" id="projectTrack">
+              <!-- PROJECT 1 -->
+              <article class="project-card">
+                <img src="assets/website.jpg" alt="Website project" />
+                <div class="project-content">
+                  <span class="project-tag">HTML & CSS</span>
+                  <h3>Student Website</h3>
+                  <p>
+                    A simple website created to practice page structure,
+                    navigation, and basic web design.
+                  </p>
+                </div>
+              </article>
 
-          <article class="project-card">
-            <img
-              src="assets/project-calculator.svg"
-              alt="Calculator interface"
-            />
-            <div class="project-content">
-              <span class="project-tag">WEB DESIGN</span>
-              <h3>Calculator Interface</h3>
-              <p>
-                A calculator interface concept designed to practice layout,
-                spacing, and styling.
-              </p>
-            </div>
-          </article>
+              <article class="project-card">
+                <img src="assets/calculator.png" alt="Calculator interface" />
+                <div class="project-content">
+                  <span class="project-tag">CALCULATOR</span>
+                  <h3>Calculator Interface</h3>
+                  <p>
+                    A calculator interface concept designed to practice layout,
+                    spacing, and styling.
+                  </p>
+                </div>
+              </article>
 
-          <div class="project-card">
-            <img src="assets/project-database.svg" alt="Database activity" />
-            <div class="project-content">
-              <span class="project-tag">DATABASE</span>
-              <h3>Database Activity</h3>
-              <p>
-                A school activity involving tables, records, relationships, and
-                basic SQL commands.
-              </p>
+              <article class="project-card">
+                <img src="assets/database.jpg" alt="Database activity" />
+                <div class="project-content">
+                  <span class="project-tag">DATABASE</span>
+                  <h3>Database Activity</h3>
+                  <p>
+                    A school activity involving tables, records, relationships,
+                    and basic SQL commands.
+                  </p>
+                </div>
+              </article>
+
+              <article class="project-card">
+                <img
+                  onclick="window.location.href = './shop.html'"
+                  src="assets/groccery store.png"
+                  alt="Shop"
+                />
+                <div class="project-content">
+                  <span class="project-tag">SHOP</span>
+                  <h3>Shop</h3>
+                  <p>
+                    I enjoy shopping for new items and exploring different
+                    stores. I also like finding unique and interesting products.
+                  </p>
+                </div>
+              </article>
             </div>
-          </article>
+          </div>
+
+          <button class="project-nav next" id="nextProject">&#10095;</button>
+        </div>
+
+        <div class="project-pagination">
+          <span id="projectCounter">1 / 4</span>
+          <div class="project-dots" id="projectDots"></div>
         </div>
       </section>
 
@@ -572,6 +509,15 @@
               projects.
             </p>
           </div>
+
+          <div class="hobby-card">
+            <div class="hobby-icon">05</div>
+            <h3>Music</h3>
+            <p>
+              I enjoy listening to music and exploring different genres. I also
+              like learning musical instruments such as the guitar.
+            </p>
+          </div>
         </div>
       </section>
 
@@ -607,86 +553,90 @@
           </div>
         </div>
       </section>
-
     </main>
 
-          <section id="social" class="section">
-        <div class="section-title">
-          <p>FIND ME ONLINE</p>
-          <h2>Social Media</h2>
+    <section id="social" class="section">
+      <div class="section-title">
+        <p>FIND ME ONLINE</p>
+        <h2>Social Media</h2>
+      </div>
+
+      <div class="social-grid">
+        <a
+          class="social-card"
+          href="https://www.facebook.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <div class="social-icon">f</div>
+          <h3>Facebook</h3>
+          <p>Visit Facebook to connect with friends.</p>
+          <span>Visit Facebook &rarr;</span>
+        </a>
+
+        <a
+          class="social-card"
+          href="https://www.youtube.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <div class="social-icon">▶</div>
+          <h3>YouTube</h3>
+          <p>Explore videos, tutorials, and entertainment.</p>
+          <span>Visit YouTube &rarr;</span>
+        </a>
+
+        <a
+          class="social-card"
+          href="https://www.tiktok.com/@mazooka60"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <div class="social-icon">◎</div>
+          <h3>TikTok</h3>
+          <p>Watch and create short videos.</p>
+          <span>Visit TikTok &rarr;</span>
+        </a>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact-section">
+      <div class="section-title">
+        <p>LET'S CONNECT</p>
+        <h2>Contact Me</h2>
+      </div>
+
+      <div class="contact-box">
+        <div class="contact-intro">
+          <h3>Thank you for visiting!</h3>
+          <p>
+            Thank you for taking the time to explore my portfolio. You can use
+            the information here to connect with me.
+          </p>
         </div>
 
-        <div class="social-grid">
-          <a
-            class="social-card"
-            href="https://www.facebook.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <div class="social-icon">f</div>
-            <h3>Facebook</h3>
-            <p>Visit Facebook to connect with friends.</p>
-            <span>Visit Facebook &rarr;</span>
-          </a>
-
-          <a
-            class="social-card"
-            href="https://www.youtube.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <div class="social-icon">▶</div>
-            <h3>YouTube</h3>
-            <p>Explore videos, tutorials, and entertainment.</p>
-            <span>Visit YouTube &rarr;</span>
-          </a>
-
-          <a
-            class="social-card"
-            href="https://www.tiktok.com/@mazooka60"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <div class="social-icon">◎</div>
-            <h3>TikTok</h3>
-            <p>Watch and create short videos.</p>
-            <span>Visit TikTok &rarr;</span>
-          </a>
+        <div class="contact-details">
+          <p>Email: tubokirbyisaiah@email.com</p>
+          <p>Facebook: Kirby Isaiah Tubo</p>
+          <p>Location: Philippines</p>
         </div>
-      </section>
-
-
-      <section id="contact" class="section contact-section">
-        <div class="section-title">
-          <p>LET'S CONNECT</p>
-          <h2>Contact Me</h2>
-        </div>
-
-        <div class="contact-box">
-          <div class="contact-intro">
-            <h3>Thank you for visiting!</h3>
-            <p>
-              Thank you for taking the time to explore my portfolio. You can use
-              the information here to connect with me.
-            </p>
-          </div>
-
-          <div class="contact-details">
-            <p>Email: tubokirbyisaiah@email.com</p>
-            <p>Facebook: Kirby Isaiah Tubo</p>
-            <p>Location: Philippines</p>
-          </div>
-        </div>
-      </section>
-
+      </div>
+    </section>
 
     <script src="script.js"></script>
 
     <footer class="footer">
       <a href="#home" class="logo">My<span>Portfolio</span></a>
       <p>Student Portfolio | 2026</p>
-      <img onclick="window.open('https://github.com/KirbyTuboPH/Kirby-Portfolio.git')" src="assets/github.png" alt="Kirby's profile" class="link-information" />
-      <a href="#home" class="back-to-top">Back to top ↑</a>
+      <div class="social-links">
+        <a
+          href="https://github.com/KirbyTuboPH"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img src="assets/github.png" alt="Kirby's profile" />
+        </a>
+      </div>
     </footer>
   </body>
 </html>
