@@ -1651,19 +1651,21 @@
 
 #infoTable {
     width: 100%;
-    table-layout: fixed;
+    max-width: 100%;
     border-collapse: collapse;
-    margin-top: 15px;
+    margin: 0 auto;
+    table-layout: fixed;
     background: #1e293b;
+    overflow-wrap: anywhere;
 }
 
 #infoTable th,
 #infoTable td {
     border: 1px solid #f4c95d;
-    padding: 8px 5px;
-    font-size: 12px;
-     overflow-wrap: anywhere;
+    padding: 12px 8px;
     text-align: center;
+    overflow-wrap: anywhere;
+    word-break: break-word;
 }
 
 #infoTable th {
@@ -1677,6 +1679,14 @@
 
 #infoTable tr:nth-child(even) {
     background: #27364b;
+}
+
+@media (max-width: 480px) {
+    #infoTable th,
+    #infoTable td {
+        padding: 9px 5px;
+        font-size: 12px;
+    }
 }
 
 #submitBtn {
