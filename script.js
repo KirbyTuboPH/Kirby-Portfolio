@@ -280,6 +280,7 @@ function checkInfo() {
   displayInfo.style.textAlign = "center";
 
   if (infoInput === "Info" || infoInput === "Infoall") {
-    displayInfo.hidden = true;
+    displayInfo.textContent = "";
+    displayInfo.style.background = "";
   }
 }
