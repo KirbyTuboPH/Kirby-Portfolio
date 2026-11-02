@@ -460,8 +460,9 @@
         align-items: center;
         justify-content: center;
         text-align: center;
-        width: 750px;
-        padding: 28px;
+        width: 100%;
+        max-width: 100%;
+        padding: 15px;
         background: var(--card);
         border: 1px solid var(--border);
         border-radius: 13px;
@@ -1649,7 +1650,8 @@
 }
 
 #infoTable {
-    width: 650px;
+    width: 100%;
+    table-layout: fixed;
     border-collapse: collapse;
     margin-top: 15px;
     background: #1e293b;
@@ -1658,7 +1660,9 @@
 #infoTable th,
 #infoTable td {
     border: 1px solid #f4c95d;
-    padding: 12px;
+    padding: 8px 5px;
+    font-size: 12px;
+     overflow-wrap: anywhere;
     text-align: center;
 }
 
@@ -1674,3 +1678,4 @@
 #infoTable tr:nth-child(even) {
     background: #27364b;
 }
+
